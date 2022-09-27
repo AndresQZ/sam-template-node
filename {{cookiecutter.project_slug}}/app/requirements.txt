@@ -1,0 +1,8 @@
+-i https://pypi.org/simple
+--extra-index-url https://pypi.org/simple
+coverage==5.1
+pytest
+pytest-cov
+mock
+simplejson==3.17.2
+aws_lambda_powertools
