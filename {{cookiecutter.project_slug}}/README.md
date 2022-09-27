@@ -1,4 +1,6 @@
-# {{cookiecutter.project_name.replace(' ', '-')}}
+
+
+{{cookiecutter.description}}
 
 # Packaging and deployment
 

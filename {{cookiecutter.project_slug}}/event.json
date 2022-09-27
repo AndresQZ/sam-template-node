@@ -1,5 +1,5 @@
 {
-    "run": "Lambda hosted checkout",
+    "run": "{{cookiecutter.lambda_name.replace(' ', '-')}}:",
     "path": "/",
     "resource": "/",
     "queryStringParameters": null,
