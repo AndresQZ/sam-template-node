@@ -1,4 +1,4 @@
-# {{cookiecutter.project_name.lower().replace(' ', '-')}}
+# {{cookiecutter.project_name.replace(' ', '-')}}
 
 # Packaging and deployment
 
@@ -8,5 +8,5 @@ template.yaml defines all resources needed by lambda and allows to define entry 
 
 
 # run lambda locally
-sam local invoke -e event.json {{cookiecutter.lambda_name}}
+sam build -u && sam local invoke -e event.json -n local.env.json {{cookiecutter.lambda_name}}
 ```

@@ -1,13 +1,13 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
-Description: {{cookiecutter.project_name.lower().replace(' ', '-')}} aws
+Description: {{cookiecutter.project_name.replace(' ', '-')}} aws
 Globals:
   Function:
     Timeout: 3
 
 Parameters:
   Environment:
-    Default: {{cookiecutter.enviroment.lower().replace(' ', '-')}}
+    Default: {{cookiecutter.enviroment.replace(' ', '-')}}
     Description: Environment
     Type: String
   LogLevel:
@@ -16,7 +16,7 @@ Parameters:
     Type: String
       
 Resources:
-  {{cookiecutter.lambda_name.lower().replace(' ', '-')}}:
+  {{cookiecutter.lambda_name.replace(' ', '-')}}:
     Type: AWS::Serverless::Function
     Properties:
       Layers:
