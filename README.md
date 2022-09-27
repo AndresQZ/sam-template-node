@@ -1,6 +1,6 @@
 # SAM-Template-Node
 
-This is a simple starting point for SAM serverless applications for NodeJS 8.10
+This is a simple starting point for SAM serverless applications for python
 
 ```bash
 .

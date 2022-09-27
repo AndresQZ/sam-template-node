@@ -1,0 +1,36 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: {{cookiecutter.project_name.lower().replace(' ', '-')}} aws
+Globals:
+  Function:
+    Timeout: 3
+
+Parameters:
+  Environment:
+    Default: {{cookiecutter.env.lower().replace(' ', '-')}}
+    Description: Environment
+    Type: String
+  LogLevel:
+    Default: DEBUG
+    Description: Log level for lambda code
+    Type: String
+      
+Mappings: 
+  RegionMap: 
+    us-east-1:
+        layer: arn:aws:lambda:us-east-1:700336187521:layer:aws-sdk:6
+    us-west-2:
+        layer: arn:aws:lambda:us-west-2:700336187521:layer:aws-sdk:6
+    eu-central-1:
+        layer: arn:aws:lambda:eu-central-1:700336187521:layer:aws-sdk:2
+
+Resources:
+  {{cookiecutter.lambda_name.lower().replace(' ', '-')}}:
+    Type: AWS::Serverless::Function
+    Properties:
+      Layers:
+        - !Sub arn:aws:lambda:${AWS::Region}:017000801446:layer:AWSLambdaPowertoolsPython:22
+      CodeUri: service/
+      Handler: app.lambda_handler
+      Runtime: python3.9
+          

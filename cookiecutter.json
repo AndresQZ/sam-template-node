@@ -1,4 +1,7 @@
 {
     "project_name": "My App",
-    "project_slug": "{{ cookiecutter.project_name|lower|replace(' ', '-') }}"
+    "lambda_name": "LambdaName",
+    "project_slug": "{{ cookiecutter.project_name|lower|replace(' ', '-') }}",
+    "team_payment": "team clip",
+    "env": "stage"
 }

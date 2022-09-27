@@ -1,0 +1,43 @@
+{
+    "run": "Lambda hosted checkout",
+    "path": "/",
+    "resource": "/",
+    "queryStringParameters": null,
+    "pathParameters": null,
+    "requestContext": {
+        "resourceId": "brn2ia",
+        "authorizer": {
+          "role": "ADMIN",
+          "api_key": null,
+          "user_id": "1636aef2-be1c-4563-8b7c-1214cc014f0a",
+          "namespace": "NS_PAYCLIP",
+          "principalId": "1636aef2-be1c-4563-8b7c-1214cc014f0a",
+          "merchant_token": "afdff06c-6bed-4def-847a-a0c00de6e17d",
+          "merchant_id": "32651e06-5f01-4830-878f-2cc51e87d8e1",
+          "api_user_id": "a3e32af6-bf6d-4efc-8420-793530944c2e"
+        },
+        "resourcePath": "/",
+        "httpMethod": "POST",
+        "extendedRequestId": "HDKNGFAZPHcF5ig=",
+        "requestTime": "17/May/2018:21:14:34 +0000",
+        "path": "/",
+        "requestTimeEpoch": 1526591674234,
+        "requestId": "4c1a4e6e-5a17-11e8-a181-83e1c65b3cc1",
+        "identity": {
+          "cognitoIdentityPoolId": null,
+          "accountId": null,
+          "cognitoIdentityId": null,
+          "caller": null,
+          "sourceIp": "35.161.38.116",
+          "accessKey": null,
+          "cognitoAuthenticationType": null,
+          "cognitoAuthenticationProvider": null,
+          "userArn": null,
+          "userAgent": "curl/7.58.0",
+          "user": null
+        },
+        "apiId": "b2wyzapjm2"
+      },
+      "body": "{\"amount\":10.00,\"currency\":\"MXN\",\"purchase_description\":\"hosted-link-nlb\",\"redirection_url\":{\"success\":\"https://merchant_ecoomerce.com/redirection/success\",\"error\":\"https://merchant_ecoomerce.com/redirection/error\",\"default\":\"https://merchant_ecoomerce.com/redirection/default\"}}"
+
+}
