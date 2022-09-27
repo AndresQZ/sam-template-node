@@ -8,5 +8,5 @@ template.yaml defines all resources needed by lambda and allows to define entry 
 
 
 # run lambda locally
-sam local invoke -e event.json {{cookiecutter.lambda_na}}
+sam local invoke -e event.json {{cookiecutter.lambda_name}}
 ```
