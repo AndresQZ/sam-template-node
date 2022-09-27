@@ -7,7 +7,7 @@ Globals:
 
 Parameters:
   Environment:
-    Default: {{cookiecutter.env.lower().replace(' ', '-')}}
+    Default: {{cookiecutter.enviroment.lower().replace(' ', '-')}}
     Description: Environment
     Type: String
   LogLevel:
@@ -15,15 +15,6 @@ Parameters:
     Description: Log level for lambda code
     Type: String
       
-Mappings: 
-  RegionMap: 
-    us-east-1:
-        layer: arn:aws:lambda:us-east-1:700336187521:layer:aws-sdk:6
-    us-west-2:
-        layer: arn:aws:lambda:us-west-2:700336187521:layer:aws-sdk:6
-    eu-central-1:
-        layer: arn:aws:lambda:eu-central-1:700336187521:layer:aws-sdk:2
-
 Resources:
   {{cookiecutter.lambda_name.lower().replace(' ', '-')}}:
     Type: AWS::Serverless::Function

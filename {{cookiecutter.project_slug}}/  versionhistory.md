@@ -1,3 +1,3 @@
-{{cookiecutter.project_name.lower().replace(' ', '-')}}
+# {{cookiecutter.project_name}}
 
 ## 1.0.0 Baseline version

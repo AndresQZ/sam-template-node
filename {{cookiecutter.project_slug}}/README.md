@@ -1,27 +1,12 @@
-# SAM-Template-Node
+# {{cookiecutter.project_name.lower().replace(' ', '-')}}
 
-This is a simple starting point for SAM serverless applications for python
+# Packaging and deployment
 
-```bash
-.
-├── README.MD                   <-- This instructions file
-├── service .                   <-- Source code for a lambda function
-│   └── app.js                  <-- Lambda function code
-│   └── package.json            <-- NodeJS dependencies and scripts
-│   └── tests                   <-- Unit tests
-│       └── unit
-│           └── test-handler.js
-├── template.yaml               <-- SAM template
-```
+This lambda uses AWS SAM to package, test and deploy.
 
-## Included Layers
-- AWS-SDK
-- AWS-XRAY-SDK
+template.yaml defines all resources needed by lambda and allows to define entry point.
 
-*Layers work in us-east-1, us-west-2, and eu-central-1*
 
-## Instructions
-To use in AWS SAM CLI
-```bash
-sam init -l gh:singledigit/sam-template-node
+# run lambda locally
+sam local invoke -e event.json {{cookiecutter.lambda_na}}
 ```
